@@ -18,15 +18,19 @@ But the question is: why this architecture?
 - **Decoder**: reconstructs original image from vague information
 - **Skip Connection**: ensure that local details are preserved, making the output sharper and more realistic
 
+
 <p align="center">
-  <img src="assets/U-net.png" alt="U-net Architecture" width="150">
+  <img src="assets/U-net.png" alt="U-net Architecture" width="500">
 </p>
+
 
 We also considered adopting a Multi-Path U-Net architecture to enhance generation quality. However, for the current implementation, we opted for a simpler design, as the more complex model would require significantly longer training time.
 
+
 <p align="center">
-  <img src="assets/Multi-head%20U-net.png" alt="Multi-head U-net" width="150">
+  <img src="assets/Multi-head%20U-net.png" alt="Multi-head U-net" width="400">
 </p>
+
 
 # Discriminator
 We use **PatchGAN** architecture for the discriminator:
@@ -37,9 +41,11 @@ Why is it efficient?
 - **Local Realism**: By focusing on small patches, PatchGAN encourages the generator to produce realistic details.
 - **Efficiency**: Reduces the number of trainable parameters compared to full-image discriminators.
 
+
 <p align="center">
-  <img src="assets/PatchGAN.png" alt="PatchGAN" width="150">
+  <img src="assets/PatchGAN.png" alt="PatchGAN" width="700">
 </p>
+
 
 # Implementation
 
@@ -58,9 +64,11 @@ Say $X$ in domain A, $Y$ in domain B
 
 - Identity Loss: $G_{AB}(Y)$ versus $Y$, $G_{BA}(X)$ versus $X$
 
+
 <p align="center">
-  <img src="assets/CycleGAN.png" alt="CycleGAN" width="150">
+  <img src="assets/CycleGAN.png" alt="CycleGAN" width="700">
 </p>
+
 
 **Dataset**
 
@@ -72,9 +80,11 @@ Using PyTorch on Kaggle
 
 **Result**
 
+
 <p align="center">
-  <img src="assets/Results.png" alt="Results" width="150">
+  <img src="assets/Results.png" alt="Results" width="400">
 </p>
+
 
 # Conclusion
 
