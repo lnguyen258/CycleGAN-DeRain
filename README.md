@@ -1,7 +1,8 @@
 # CycleGAN-DeRain 
 
 This project applies **CycleGAN** for image-to-image translation between two domains, focusing on rain removal. It uses a U-Net generator with skip connections to preserve details and a PatchGAN discriminator to evaluate local realism, enabling clear and realistic outputs from rainy images.
-Team: @huntermilk007 @luzz216
+
+Team: [Loc Hoang](https://github.com/huntermilk007), [Ly Dinh](https://github.com/luzz216)
 
 # Architecture
 Consists of two components:
@@ -93,4 +94,5 @@ The model successfully removes rain from images, but performance is limited by t
 
 
 To overcome these issues, we are exploring **diffusion models** for more robust generation and **Mamba** for sequential video data. We will continue updating this repo with future research.
+
 
